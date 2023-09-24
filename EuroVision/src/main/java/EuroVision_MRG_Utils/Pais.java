@@ -23,7 +23,11 @@ public class Pais
     }
 
     public int getPuntosTotales() {
-        return votos.values().stream().mapToInt(Integer::intValue).sum();
+    	int suma = 0;
+    	for (Integer voto : votos.values()) {
+    	    suma += voto;
+    	}
+    	return suma;
     }
 
     public int getMaxPuntos() {
